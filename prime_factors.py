@@ -2,14 +2,13 @@ class PrimeFactors:
 
     def of(self, value):
         factors = []
-        if value == 4:
-            while (value % 2 == 0):
-                factors.append(2)
-                value //= 2
-        elif value == 6:
-            factors.append(2)
-            factors.append(3)
-        elif value > 1:
-            factors.append(value)
+        divisor = 2
+        if value > 1:
+            while value > 1:
+                while value % divisor == 0:
+                    factors.append(divisor)
+                    value //= divisor
+                divisor += 1
+
 
         return factors
