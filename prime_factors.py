@@ -13,10 +13,15 @@ class PrimeFactors:
         return factors
 
     def of_recursive(self, number):
+        factors = []
         if number == 2:
-            return [2]
+            factors = [2]
         if number == 3:
-            return [3]
+            factors = [3]
+
         if number == 4:
-            return [2, 2]
-        return []
+            if number % 2 == 0:
+                factors.append(2)
+                factors.extend(self.of_recursive(number // 2))
+                number //= 2
+        return factors
