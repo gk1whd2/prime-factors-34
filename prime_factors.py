@@ -14,4 +14,6 @@ class PrimeFactors:
 
 
     def of_recursive(self, number):
+        if number == 2:
+            return [2]
         return []
