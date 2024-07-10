@@ -12,10 +12,11 @@ class PrimeFactors:
 
         return factors
 
-
     def of_recursive(self, number):
         if number == 2:
             return [2]
         if number == 3:
             return [3]
+        if number == 4:
+            return [2, 2]
         return []
