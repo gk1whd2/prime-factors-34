@@ -14,16 +14,11 @@ class PrimeFactors:
 
     def of_recursive(self, number):
         factors = []
-        dividor = 2
+        divisor = 2
 
-        if number == 2:
-            factors = [2]
-        if number == 3:
-            factors = [3]
-
-        if number > 3:
-            if number % dividor == 0:
-                factors.append(dividor)
-                factors.extend(self.of_recursive(number // dividor))
-                number //= dividor
+        if number > 1:
+            while number % divisor != 0:
+                divisor += 1
+            factors.append(divisor)
+            factors.extend(self.of_recursive(number // divisor))
         return factors

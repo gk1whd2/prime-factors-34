@@ -44,3 +44,5 @@ class TestPrimeFactors(TestCase):
 
     def test_prime_factor_of_6_using_recursive(self):
         self.assertEqual([2, 3], self.prime_factors.of_recursive(6))
+    def test_prime_factor_of_5_using_recursive(self):
+        self.assertEqual([5], self.prime_factors.of_recursive(5))
