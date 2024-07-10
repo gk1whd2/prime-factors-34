@@ -10,5 +10,4 @@ class PrimeFactors:
                     value //= divisor
                 divisor += 1
 
-
         return factors
