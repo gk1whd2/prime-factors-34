@@ -11,3 +11,7 @@ class PrimeFactors:
                 divisor += 1
 
         return factors
+
+
+    def of_recursive(self, number):
+        return []
